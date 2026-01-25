@@ -1,27 +1,31 @@
 :root{
-  --bg: #0b1220;
+  --bg: #070709;
   --card: rgba(255, 255, 255, 0.06);
-  --card2: rgba(255, 255, 255, 0.09);
+  --card2: rgba(255, 255, 255, 0.10);
   --text: #eaf0ff;
   --muted: rgba(234, 240, 255, 0.68);
   --accent: #6ee7ff;
   --accent2: #9b8cff;
   --border: rgba(255, 255, 255, 0.12);
-  --shadow: 0 20px 60px rgba(0,0,0,0.45);
+  --shadow: 0 20px 60px rgba(0,0,0,0.55);
   --radius: 18px;
 }
+
 
 *{ margin:0; padding:0; box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 body{
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  background: radial-gradient(1000px 500px at 20% 0%, rgba(110,231,255,0.16), transparent 60%),
-              radial-gradient(800px 400px at 100% 30%, rgba(155,140,255,0.18), transparent 60%),
-              var(--bg);
+  background:
+    radial-gradient(900px 450px at 15% 12%, rgba(255, 59, 59, 0.18), transparent 60%),
+    radial-gradient(900px 450px at 85% 22%, rgba(255, 122, 24, 0.10), transparent 60%),
+    radial-gradient(900px 450px at 50% 95%, rgba(255, 59, 59, 0.10), transparent 60%),
+    var(--bg);
   color: var(--text);
   min-height: 100vh;
   overflow-x: hidden;
 }
+
 
 a{ color: inherit; text-decoration:none; }
 ul{ padding-left: 18px; margin-top: 10px; }
@@ -607,6 +611,12 @@ li{ margin: 6px 0; color: var(--muted); }
     box-shadow: 0 10px 25px rgba(0,0,0,0.18);
     flex-shrink: 0;
   }
+  .mobile-avatar{
+    transition: transform 0.25s ease;
+  }
+  .mobile-avatar:active{
+    transform: scale(0.95);
+  }
 
 
   .mobile-title h3{
@@ -685,6 +695,7 @@ body.light .social.icon img,
 body.light .skill img{
   filter: none;
 }
+
 .reveal-item{
   opacity: 0;
   transform: translateY(22px) scale(0.98);
@@ -694,6 +705,7 @@ body.light .skill img{
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
 body::before{
   content:"";
   position: fixed;
@@ -706,7 +718,6 @@ body::before{
   opacity: 1;
   z-index: -2;
 }
-
 body::after{
   content:"";
   position: fixed;
@@ -718,4 +729,11 @@ body::after{
   background-size: 60px 60px;
   opacity: 0.12;
   z-index: -1;
+}
+
+.sidebar,
+.card,
+.project-card,
+.hero-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.05));
 }
