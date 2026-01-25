@@ -135,3 +135,15 @@ themeToggle?.addEventListener("click", () => {
   const isLight = document.body.classList.contains("light");
   setTheme(isLight ? "dark" : "light");
 });
+/* ===== Reveal on Scroll ===== */
+const revealEls = document.querySelectorAll(".reveal-item");
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.12 });
+
+revealEls.forEach(el => revealObserver.observe(el));
