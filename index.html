@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush Kumar Singh | Frontend Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Mobile Top Bar -->
+  <header class="mobile-header">
+    <div class="mobile-left">
+      <div class="mobile-avatar"></div>
+      <div class="mobile-title">
+        <h3>Ayush Kumar Singh</h3>
+        <p>Frontend Developer</p>
+      </div>
+    </div>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </header>
+
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="avatar-wrap">
+          <img src="assets/profile.png" alt="Ayush" class="avatar"
+            onerror="this.style.display='none'; document.querySelector('.avatar-fallback').style.display='flex';" />
+          <div class="avatar-fallback">AK</div>
+        </div>
+
+        <h1 class="name">Ayush Kumar Singh</h1>
+        <p class="role">Frontend Developer</p>
+
+        <p class="intro">
+          Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving
+          complex and challenging real-world problems.
+        </p>
+
+        <div class="btn-row">
+          <a class="btn primary" href="#contact">Hire Me</a>
+          <a class="btn ghost" href="assets/resume.pdf" target="_blank">Resume</a>
+          <button class="btn ghost" id="themeToggle" type="button">🌙 Dark</button>
+        </div>
+
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/ayush-kumar-singh-a9176a29b/" target="_blank" class="social icon" title="LinkedIn">
+            in
+          </a>
+          <a href="https://github.com/Ayush-Kumar-Singh-a" target="_blank" class="social icon" title="GitHub">
+            <img src="https://cdn.simpleicons.org/github" alt="GitHub">
+          </a>
+          <a href="https://leetcode.com/u/PcvO9Ce8J3/" target="_blank" class="social icon" title="LeetCode">
+            <img src="https://cdn.simpleicons.org/leetcode" alt="LeetCode">
+          </a>
+        </div>
+      </div>
+
+      <!-- ✅ Sidebar Nav -->
+      <nav class="nav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+        <p class="small">
+          📍 Mohali, India<br />
+          📞 9508234114<br />
+          ✉️ ayushsingh20224@gmail.com
+        </p>
+      </div>
+    </aside>
+
+    <!-- ✅ Main -->
+    <main class="main">
+
+      <!-- HOME -->
+      <section class="section hero" id="home">
+        <div class="hero-card reveal">
+          <p class="chip">Frontend Developer • React • JavaScript</p>
+          <h2>
+            Hi, I’m <span>Ayush Kumar Singh</span> 👋
+          </h2>
+
+          <p class="hero-text">
+            Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving
+            complex and challenging real-world problems.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="section-head">
+          <h3>About</h3>
+          <p>Quick snapshot of who I am</p>
+        </div>
+
+        <div class="card">
+          <p>
+            A well-organized, creative and goal-oriented under-graduate possessing excellent
+            communication, problem-solving and leadership skills with a flair to explore suitable avenues in
+            Computer Science Engineering while developing advanced projects with efficiency and quality.
+          </p>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="section" id="experience">
+        <div class="section-head">
+          <h3>Experience</h3>
+          <p>Hands-on training and learning</p>
+        </div>
+
+        <div class="card timeline">
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <h4>Summer Training</h4>
+              <p class="muted">1 Month</p>
+            </div>
+            <div class="timeline-right">
+              <p>
+                Learned Machine Learning using Python and built a project on
+                <b>House Price Prediction</b>.
+              </p>
+              <ul>
+                <li>Worked with NumPy, Pandas, Scikit-learn</li>
+                <li>Built regression model and evaluated performance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section" id="projects">
+        <div class="section-head">
+          <h3>Projects</h3>
+          <p>Some things I’ve built</p>
+        </div>
+
+        <div class="grid">
+
+          <!-- Project 1 -->
+          <div class="project-card" onclick="openProjectModal(0)">
+            <img class="project-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=60" alt="Growth Sphere">
+
+            <div class="project-top">
+              <h4>Growth Sphere</h4>
+              <p class="muted">Software Project</p>
+            </div>
+
+            <p class="desc">
+              Developed a responsive e-learning platform to support student skill growth and study habits.
+            </p>
+
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+
+            <div class="project-links">
+              <a class="link" href="https://fluffy-starlight-59cfc6.netlify.app/" target="_blank" onclick="event.stopPropagation()">Live Demo</a>
+              <span class="link disabled">GitHub (Coming Soon)</span>
+            </div>
+
+            <button class="dots-btn" onclick="event.stopPropagation(); openProjectModal(0)">⋮</button>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" onclick="openProjectModal(1)">
+            <img class="project-img" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1400&q=60" alt="House Price Prediction">
+
+            <div class="project-top">
+              <h4>House Price Prediction</h4>
+              <p class="muted">Machine Learning Project</p>
+            </div>
+
+            <p class="desc">
+              Built an end-to-end ML model to predict California housing prices using regression techniques.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">XGBoost</span>
+            </div>
+
+            <div class="project-links">
+              <span class="link disabled">Live Demo (Coming Soon)</span>
+              <span class="link disabled">GitHub (Coming Soon)</span>
+            </div>
+
+            <button class="dots-btn" onclick="event.stopPropagation(); openProjectModal(1)">⋮</button>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" onclick="openProjectModal(2)">
+            <img class="project-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=60" alt="Street Light System">
+
+            <div class="project-top">
+              <h4>Automatic Street Light System</h4>
+              <p class="muted">Hardware Project</p>
+            </div>
+
+            <p class="desc">
+              Smart streetlight system that activates lights using motion and light sensors (Hackathon 2023).
+            </p>
+
+            <div class="tags">
+              <span class="tag">Arduino</span>
+              <span class="tag">Sensors</span>
+              <span class="tag">Prototype</span>
+            </div>
+
+            <div class="project-links">
+              <span class="link disabled">Live Demo (Offline)</span>
+              <span class="link disabled">GitHub (Coming Soon)</span>
+            </div>
+
+            <button class="dots-btn" onclick="event.stopPropagation(); openProjectModal(2)">⋮</button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="section" id="skills">
+        <div class="section-head">
+          <h3>Skills</h3>
+          <p>My current toolkit</p>
+        </div>
+
+        <div class="card">
+          <div class="skills">
+            <span class="skill"><img src="https://cdn.simpleicons.org/python" alt=""> Python</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/html5" alt=""> HTML5</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/css3" alt=""> CSS3</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/javascript" alt=""> JavaScript</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/react" alt=""> React</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/nodedotjs" alt=""> Node.js</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/express" alt=""> Express</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/mongodb" alt=""> MongoDB</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/mysql" alt=""> MySQL</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/postgresql" alt=""> PostgreSQL</span>
+            <span class="skill"><img src="https://cdn.simpleicons.org/openjdk" alt=""> Java</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="section" id="education">
+        <div class="section-head">
+          <h3>Education</h3>
+          <p>Academic background</p>
+        </div>
+
+        <div class="card edu">
+          <div>
+            <h4>Chandigarh Engineering College</h4>
+            <p class="muted">Bachelor of Technology in Information Technology</p>
+            <p>3rd Year (Currently)</p>
+          </div>
+          <div class="edu-right">
+            <p class="cgpa">CGPA: <b>7.585</b></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="section-head">
+          <h3>Contact</h3>
+          <p>Let’s connect & build something great</p>
+        </div>
+
+        <div class="card">
+          <div class="contact-icons">
+            <a class="contact-icon" href="tel:9508234114">
+              📞 <span class="tip">Call Ayush</span>
+            </a>
+
+            <a class="contact-icon" href="mailto:ayushsingh20224@gmail.com">
+              ✉️ <span class="tip">Mail Ayush</span>
+            </a>
+
+            <a class="contact-icon" href="https://github.com/Ayush-Kumar-Singh-a" target="_blank">
+              🐙 <span class="tip">GitHub</span>
+            </a>
+
+            <a class="contact-icon" href="https://www.linkedin.com/in/ayush-kumar-singh-a9176a29b/" target="_blank">
+              in <span class="tip">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <footer class="footer">
+        <p>© <span id="year"></span> Ayush Kumar Singh </p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop" onclick="closeProjectModal()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeProjectModal()">✕</button>
+      <h2 id="modalTitle">Project</h2>
+      <p id="modalDesc"></p>
+
+      <div class="modal-links">
+        <a class="btn primary" id="modalLive" target="_blank">Live</a>
+        <a class="btn ghost" id="modalGit" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
