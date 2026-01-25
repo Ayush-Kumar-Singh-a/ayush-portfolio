@@ -125,7 +125,7 @@ function setTheme(mode){
     localStorage.setItem("theme", "dark");
   }
 }
-
+localStorage.removeItem("theme");
 const savedTheme = localStorage.getItem("theme");
 if(savedTheme === "dark") setTheme("dark");
 else setTheme("light");
