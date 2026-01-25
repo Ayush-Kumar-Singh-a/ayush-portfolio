@@ -29,7 +29,6 @@ navLinks.forEach(link => {
   });
 });
 
-/* ✅ active nav on scroll */
 const sections = ["home","about","experience","projects","skills","education","contact"]
   .map(id => document.getElementById(id));
 
@@ -47,8 +46,6 @@ window.addEventListener("scroll", () => {
   navLinks.forEach(l => l.classList.remove("active"));
   document.querySelector(`.nav a[href="#${current}"]`)?.classList.add("active");
 });
-
-/* ✅ Projects Modal */
 const modalBackdrop = document.getElementById("modalBackdrop");
 const modalTitle = document.getElementById("modalTitle");
 const modalDesc = document.getElementById("modalDesc");
@@ -114,9 +111,6 @@ window.closeProjectModal = function(){
 window.addEventListener("keydown", (e) => {
   if(e.key === "Escape") closeProjectModal();
 });
-/* =========================
-   Theme Toggle (Dark/Light)
-   ========================= */
 
 const themeToggle = document.getElementById("themeToggle");
 
@@ -132,12 +126,10 @@ function setTheme(mode){
   }
 }
 
-// Load saved theme
 const savedTheme = localStorage.getItem("theme");
 if(savedTheme === "light") setTheme("light");
 else setTheme("dark");
 
-// Toggle on click
 themeToggle?.addEventListener("click", () => {
   const isLight = document.body.classList.contains("light");
   setTheme(isLight ? "dark" : "light");
