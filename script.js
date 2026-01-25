@@ -135,7 +135,6 @@ themeToggle?.addEventListener("click", () => {
   const isLight = document.body.classList.contains("light");
   setTheme(isLight ? "dark" : "light");
 });
-/* ===== Reveal on Scroll ===== */
 const revealEls = document.querySelectorAll(".reveal-item");
 
 const revealObserver = new IntersectionObserver((entries) => {
