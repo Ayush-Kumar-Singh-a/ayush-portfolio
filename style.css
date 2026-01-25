@@ -685,3 +685,37 @@ body.light .social.icon img,
 body.light .skill img{
   filter: none;
 }
+.reveal-item{
+  opacity: 0;
+  transform: translateY(22px) scale(0.98);
+  transition: 0.7s ease;
+}
+.reveal-item.show{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(700px 350px at 20% 10%, rgba(110,231,255,0.14), transparent 60%),
+    radial-gradient(700px 350px at 80% 20%, rgba(155,140,255,0.12), transparent 60%),
+    radial-gradient(700px 350px at 50% 95%, rgba(110,231,255,0.10), transparent 60%);
+  opacity: 1;
+  z-index: -2;
+}
+
+body::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.12;
+  z-index: -1;
+}
