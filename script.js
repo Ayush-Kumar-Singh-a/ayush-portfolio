@@ -28,6 +28,16 @@ navLinks.forEach(link => {
     closeMenu();
   });
 });
+window.addEventListener("load", () => {
+  if (window.location.hash) {
+    history.replaceState(null, "", window.location.pathname);
+  }
+});
+window.history.scrollRestoration = "manual";
+
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
 
 const sections = ["home","about","experience","projects","skills","education","contact"]
   .map(id => document.getElementById(id));
@@ -146,3 +156,19 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 revealEls.forEach(el => revealObserver.observe(el));
+
+window.history.scrollRestoration = "manual";
+
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+
+  if (window.location.hash) {
+    history.replaceState(null, "", window.location.pathname);
+  }
+
+  const splash = document.getElementById("splashLoader");
+
+  setTimeout(() => splash?.classList.add("hide"), 900);
+  setTimeout(() => splash?.remove(), 1500);
+});
+
